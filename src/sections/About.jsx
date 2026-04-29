@@ -94,7 +94,7 @@ export default function About() {
               About <span className="text-[#D8B89D]">me</span>
             </h2>
             <p className="text-gray-300 leading-relaxed text-base md:text-lg max-w-lg">
-              Bio placeholder — reemplazá con tu descripción.
+              Bio
             </p>
           </motion.div>
 

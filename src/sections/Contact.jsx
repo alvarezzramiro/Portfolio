@@ -28,10 +28,10 @@ export default function Contact() {
 
     try {
       await emailjs.send(
-        "service_p7vp8bl",     // tu service id
-        "template_gpyck2a",    // tu template id
-        form,                  // tu state
-        "0i87j6d-OF8YH5gUg"    // public key
+        "service_cfkftb6",
+        "template_ldyycfp",
+        form,
+        "OTRlNOxBBUKbiSzg_"
       );
 
       setStatus("success");
@@ -232,7 +232,7 @@ export default function Contact() {
                   "
                 >
                   <img
-                    src="/icons/social/linkedinlogo.svg"
+                    src="icons/social/linkedinlogo.svg"
                     className="
                       w-5 h-5 opacity-70
                       group-hover:opacity-100
@@ -257,7 +257,7 @@ export default function Contact() {
                   "
                 >
                   <img
-                    src="/icons/social/githublogo.svg"
+                    src="icons/hard-skills/githublogo.svg"
                     className="
                       w-5 h-5 opacity-70
                       group-hover:opacity-100
@@ -282,7 +282,7 @@ export default function Contact() {
                   "
                 >
                   <img
-                    src="/icons/social/instagramlogo.svg"
+                    src="icons/social/instagramlogo.svg"
                     className="
                       w-5 h-5 opacity-70
                       group-hover:opacity-100

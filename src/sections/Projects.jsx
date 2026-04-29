@@ -1,13 +1,27 @@
 import Section from "../components/Section";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import githubLogo from "/icons/hard-skills/githublogo.svg";
 
 const projects = [
-  { title: "Project One", description: "Description", logo: "🛠️", repo: "#" },
-  { title: "Project Two", description: "Description", logo: "⚙️", repo: "#" },
-  { title: "Project Three", description: "Description", logo: "🚀", repo: "#" },
-  { title: "Project Four", description: "Description", logo: "📊", repo: "#" },
+  { title: "Project One", description: "Description", logo: "", repo: "#" },
+  { title: "Project Two", description: "Description", logo: "", repo: "#" },
+  { title: "Project Three", description: "Description", logo: "", repo: "#" },
+  { title: "Project Four", description: "Description", logo: "", repo: "#" },
 ];
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay: i * 0.1,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  }),
+};
 
 function ProjectCard({ title, description, logo, repo, index }) {
   const ref = useRef(null);
@@ -17,16 +31,16 @@ function ProjectCard({ title, description, logo, repo, index }) {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{
-        duration: 0.6,
-        delay: index * 0.1,
-        ease: [0.22, 1, 0.36, 1],
-      }}
+      custom={index}
+      variants={cardVariants}
+      initial="hidden"
+      animate={isInView ? "show" : "hidden"}
       whileHover={{
         y: -6,
         scale: 1.02,
+        transition: {
+          duration: 0.15,
+        },
       }}
       className="group relative flex flex-col gap-5 p-6 rounded-2xl
         border border-white/10 bg-[#2a2a2a]
@@ -58,10 +72,30 @@ function ProjectCard({ title, description, logo, repo, index }) {
       {/* Link */}
       <a
         href={repo}
-        className="text-sm text-[#D8B89D] hover:text-white transition-colors duration-150"
+        target="_blank"
+        rel="noopener noreferrer"
         onClick={(e) => e.stopPropagation()}
+        className="
+          flex items-center gap-2
+          text-sm text-gray-400
+          group/link
+          transition-all duration-200
+        "
       >
-        View repository →
+        <img
+          src={githubLogo}
+          alt="GitHub"
+          className="
+            w-4 h-4 opacity-70
+            group-hover/link:opacity-100
+            group-hover/link:scale-110
+            transition
+          "
+        />
+
+        <span className="group-hover/link:text-[#D8B89D] transition">
+          View repository →
+        </span>
       </a>
     </motion.div>
   );

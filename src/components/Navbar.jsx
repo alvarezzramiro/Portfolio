@@ -60,7 +60,7 @@ export default function Navbar() {
       },
       {
         root: null,
-        rootMargin: "-40% 0px -40% 0px", // 🔥 clave
+        rootMargin: "-40% 0px -40% 0px",
         threshold: 0,
       }
     );

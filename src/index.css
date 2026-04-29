@@ -2,14 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-[#292929] text-white;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   @apply font-sans bg-[#292929] text-white;
 }
 
-html {
-  scroll-behavior: smooth;
-}
