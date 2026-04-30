@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="relative">
 
-      {/* FONDO GLOBAL — una sola vez */}
+      {/* FONDO GLOBAL */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#292929] via-[#3a3a3a] to-[#1a1a1a]" />
         <div className="absolute top-[20%] left-[15%] w-[500px] h-[500px] bg-[#5C5F4F] opacity-40 blur-[120px]" />

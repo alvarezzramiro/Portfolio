@@ -1,30 +1,12 @@
 import Section from "../components/Section";
 import { motion } from "framer-motion";
+import { fadeUpContainer, fadeUpItem } from "../utils/animations.js"
+
+const titleClass = "text-5xl md:text-7xl font-semibold tracking-tight leading-tight";
+const subtitleClass = "text-lg md:text-2xl text-[#5C5F4F] tracking-wide";
+const textClass = "text-gray-300 max-w-xl leading-relaxed text-base md:text-lg";
 
 export default function Home() {
-  const container = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.25,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 30, filter: "blur(6px)" },
-    show: {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      transition: {
-        duration: 0.8,
-        ease: [0.22, 1, 0.36, 1], // easing suave (easeOutCubic pro)
-      },
-    },
-  };
-  
   return (
     <Section id="home">
       
@@ -32,7 +14,7 @@ export default function Home() {
       <div className="grid grid-cols-1 md:grid-cols-2 w-full items-center">
 
         <motion.div
-          variants={container}
+          variants={fadeUpContainer}
           initial="hidden"
           whileInView="show"
           viewport={{ once: false }}
@@ -40,29 +22,18 @@ export default function Home() {
         >
 
         {/* Nombre */}
-        <motion.h1
-          variants={item}
-          className="text-5xl md:text-7xl font-semibold tracking-tight leading-tight"
-        >
+        <motion.h1 variants={fadeUpItem} className={titleClass}>
           Ramiro{" "}
-          <span className="text-[#D8B89D]">
-            Alvarez
-          </span>
+          <span className="text-[#D8B89D]"> Alvarez </span>
         </motion.h1>
 
         {/* Rol */}
-        <motion.h2
-          variants={item}
-          className="text-lg md:text-2xl text-[#5C5F4F] tracking-wide"
-        >
+        <motion.h2 variants={fadeUpItem} className={subtitleClass}>
           Backend Developer
         </motion.h2>
 
         {/* Descripción */}
-        <motion.p
-          variants={item}
-          className="text-gray-300 max-w-xl leading-relaxed text-base md:text-lg"
-        >
+        <motion.p variants={fadeUpItem} className={textClass}>
           Descripcion
         </motion.p>
 
