@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import Home from "./sections/Home";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
