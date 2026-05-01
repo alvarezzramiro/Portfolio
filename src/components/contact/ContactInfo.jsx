@@ -7,10 +7,12 @@ export default function ContactInfo() {
   return (
     <motion.div
       variants={fadeRight}
+      whileHover={{y: -4}}
+      transition={{ duration: 0.2 }}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true }}
-      className="flex flex-col gap-6 p-6 rounded-2xl bg-[#292929]/70 border border-white/10"
+      viewport={{ once: false, margin: "-100px" }}
+      className="self-center lg:self-center flex flex-col gap-6 p-6 rounded-2xl bg-[#292929]/70 border border-white/10"
     >
       <h3 className="text-2xl text-gray-200 font-medium">
         Contact Info

@@ -37,7 +37,7 @@ export default function Skills() {
             variants={slideLeft}
             initial="hidden"
             whileInView="show"
-            viewport={{ margin: "-100px" }}
+            viewport={{ once: false, margin: "-100px" }}
             className="flex flex-col gap-8"
           >
             <h3 className="text-3xl text-gray-200 font-medium text-center">

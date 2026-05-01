@@ -1,26 +1,14 @@
 import Section from "../components/Section";
 import { motion } from "framer-motion";
-import { fadeLeftVariants, staggerContainerVariants, staggerItemVariants } from "../utils/animations.js"
+import { datos, education, languages } from "../data/about.js"
+import {
+  fadeLeftVariants,
+  staggerContainerVariants,
+  staggerItemVariants,
+} from "../utils/animations.js";
 
 const labelClass = "text-xs text-[#5C5F4F] tracking-widest uppercase";
 const valueClass = "text-gray-200 text-sm font-medium";
-const sectionTitle = "text-lg font-semibold text-[#D8B89D] tracking-wide";
-  
-const datos = [
-  { label: "Age",      value: "23" },
-  { label: "Location", value: "Tandil, Buenos Aires, Argentina" },
-  { label: "Focus",    value: "Software developing" },
-];
-
-const education = [
-  { year: "2021 – present", title: "Computer Science", place: "Universidad X" },
-  { year: "2020",           title: "Curso Y",          place: "Plataforma Z" },
-];
-
-const languages = [
-  { lang: "Spanish", level: "Native" },
-  { lang: "English", level: "Advanced" },
-];
 
 function InfoBlock({ title, children }) {
   return (
@@ -28,28 +16,24 @@ function InfoBlock({ title, children }) {
       <h3 className="text-lg font-semibold text-[#D8B89D] tracking-wide">
         {title}
       </h3>
-
-      <div className="flex flex-col gap-3">
-        {children}
-      </div>
+      <div className="flex flex-col gap-3">{children}</div>
     </div>
   );
 }
 
 export default function About() {
   return (
-    <Section id="about">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start w-full">
+    <Section id="about" centered>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 w-full items-center justify-items-center">
 
-        {/* IZQUIERDA — Foto + datos debajo */}
+        {/* IZQUIERDA */}
         <motion.div
           variants={fadeLeftVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.4 }}
+          viewport={{ once: false, margin: "-100px" }}
           className="flex flex-col items-center lg:items-start gap-6"
         >
-
           {/* Foto */}
           <div className="relative w-64 h-64 md:w-72 md:h-72">
             <div className="absolute -bottom-4 -right-4 w-full h-full rounded-2xl border border-[#D8B89D]/30" />
@@ -62,7 +46,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Datos debajo de la foto */}
+          {/* Datos */}
           <div className="grid grid-cols-1 gap-3 w-full max-w-xs">
             {datos.map(({ label, value }) => (
               <div
@@ -74,18 +58,16 @@ export default function About() {
               </div>
             ))}
           </div>
-
         </motion.div>
 
-        {/* DERECHA — Bio + Education + Languages */}
+        {/* DERECHA */}
         <motion.div
           variants={staggerContainerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.4 }}
-          className="flex flex-col gap-8"
+          viewport={{ once: false, margin: "-100px" }}
+          className="flex flex-col gap-10"
         >
-
           {/* About */}
           <motion.div variants={staggerItemVariants} className="flex flex-col gap-3">
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
@@ -120,8 +102,8 @@ export default function About() {
               ))}
             </InfoBlock>
           </motion.div>
-
         </motion.div>
+
       </div>
     </Section>
   );

@@ -4,7 +4,7 @@ import ContactInfo from "../components/contact/ContactInfo";
 
 export default function Contact() {
   return (
-    <Section id="contact">
+    <Section id="contact" centered>
       <div className="flex flex-col gap-12 w-full">
 
         {/* Header */}
@@ -18,7 +18,7 @@ export default function Contact() {
         </div>
 
         {/* Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           <ContactForm />
           <ContactInfo />
         </div>

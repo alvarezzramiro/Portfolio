@@ -13,7 +13,7 @@ export default function SkillCategory({ title, items }) {
         variants={skillsContainer}
         initial="hidden"
         whileInView="show"
-        viewport={{ margin: "-50px" }}
+        viewport={{ once: false, margin: "-50px" }}
         className="flex flex-wrap justify-center gap-6 max-w-lg"
       >
         {items.map((skill) => (

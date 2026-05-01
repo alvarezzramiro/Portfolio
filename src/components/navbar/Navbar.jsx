@@ -33,7 +33,7 @@ export default function Navbar() {
 
         {/* LOGO */}
         <div className="text-gray-300 font-medium">
-          Ramiro Alvarez
+          Ramiro Alvarez Zulaica
         </div>
 
         {/* DESKTOP */}

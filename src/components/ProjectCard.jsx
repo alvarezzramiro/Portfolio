@@ -7,21 +7,22 @@ export default function ProjectCard({ title, description, logo, repo, index }) {
     <motion.div
       custom={index}
       variants={projectCardVariants}
-      whileHover={{
-        y: -6,
-        scale: 1.02,
-        transition: { duration: 0.15 },
-      }}
-      className="group relative flex flex-col gap-5 p-6 rounded-2xl
+      className="
+        group relative flex flex-col gap-5 p-6 rounded-2xl
         border border-white/10 bg-[#2a2a2a]
         hover:border-[#D8B89D]/40
         transition-colors duration-150
-        will-change-transform"
+        will-change-transform
+      "
     >
       {/* Glow */}
-      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100
-        transition-opacity duration-150
-        bg-gradient-to-br from-[#D8B89D]/10 to-transparent pointer-events-none" />
+      <div
+        className="
+          absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100
+          transition-opacity duration-150
+          bg-gradient-to-br from-[#D8B89D]/10 to-transparent pointer-events-none
+        "
+      />
 
       {/* Logo */}
       {logo && (

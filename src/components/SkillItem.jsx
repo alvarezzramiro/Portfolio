@@ -5,6 +5,11 @@ export default function SkillItem({ name, icon, size = "w-7 h-7" }) {
   return (
     <motion.div
       variants={skillsItem}
+      whileHover={{
+        y: -4,
+        scale: 1.05,
+        transition: { duration: 0.15 }
+      }}
       className="flex flex-col items-center gap-2 group"
     >
       <div className="w-14 h-14 flex items-center justify-center rounded-xl border border-white/10 bg-[#2a2a2a]
