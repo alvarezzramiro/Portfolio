@@ -1,6 +1,6 @@
-import Section from "../components/Section";
+import Section from "@/shared/components/Section.jsx";
 import { motion } from "framer-motion";
-import { fadeUpContainer, fadeUpItem } from "../utils/animations.js";
+import { fadeUpContainer, fadeUpItem } from "@/shared/utils/animations.js";
 
 const titleClass =
   "text-5xl md:text-7xl font-semibold tracking-tight leading-tight";

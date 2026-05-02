@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeRight } from "../../utils/animations";
+import { fadeRight } from "@/shared/utils/animations";
 import SocialLink from "./SocialLink";
 
 
@@ -7,7 +7,6 @@ export default function ContactInfo() {
   return (
     <motion.div
       variants={fadeRight}
-      whileHover={{y: -4}}
       transition={{ duration: 0.2 }}
       initial="hidden"
       whileInView="show"

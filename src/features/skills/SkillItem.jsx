@@ -1,16 +1,15 @@
 import { motion } from "framer-motion";
-import { skillsItem } from "../utils/animations.js";
+import { skillsItem } from "@/shared/utils/animations.js";
 
 export default function SkillItem({ name, icon, size = "w-7 h-7" }) {
   return (
     <motion.div
       variants={skillsItem}
-      whileHover={{
-        y: -4,
-        scale: 1.05,
-        transition: { duration: 0.15 }
-      }}
-      className="flex flex-col items-center gap-2 group"
+      whileHover={{ y: -4, scale: 1.05 }}
+      className="
+        flex flex-col items-center gap-2 group
+        md:hover:scale-105 md:hover:-translate-y-1
+      "
     >
       <div className="w-14 h-14 flex items-center justify-center rounded-xl border border-white/10 bg-[#2a2a2a]
         group-hover:border-[#D8B89D]/40 transition-all duration-150"

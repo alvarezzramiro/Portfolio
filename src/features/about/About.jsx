@@ -1,11 +1,11 @@
-import Section from "../components/Section";
+import Section from "@/shared/components/Section.jsx";
 import { motion } from "framer-motion";
-import { datos, education, languages } from "../data/about.js"
+import { datos, education, languages } from "@/shared/data/about.js"
 import {
   fadeLeftVariants,
   staggerContainerVariants,
   staggerItemVariants,
-} from "../utils/animations.js";
+} from "@/shared/utils/animations.js";
 
 const labelClass = "text-xs text-[#5C5F4F] tracking-widest uppercase";
 const valueClass = "text-gray-200 text-sm font-medium";

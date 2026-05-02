@@ -1,14 +1,11 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
-import Navbar from "./components/navbar/Navbar";
-import Home from "./sections/Home";
-import About from "./sections/About";
-import Projects from "./sections/Projects";
-import Skills from "./sections/Skills";
-import Contact from "./sections/Contact";
+import Navbar from "./shared/components/navbar/Navbar";
+import Home from "./features/home/Home";
+import About from "./features/about/About";
+import Projects from "./features/projects/Projects";
+import Skills from "./features/skills/Skills";
+import Contact from "./features/contact/Contact";
 
 function App() {
   return (

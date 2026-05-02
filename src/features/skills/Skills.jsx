@@ -1,15 +1,15 @@
-import Section from "../components/Section.jsx";
+import Section from "@/shared/components/Section.jsx";
 import { motion } from "framer-motion";
-import SkillCategory from "../components/SkillCategory.jsx";
-import SkillItem from "../components/SkillItem.jsx";
-import { slideLeft, slideRight } from "../utils/animations.js";
+import SkillCategory from "./SkillCategory.jsx";
+import SkillItem from "./SkillItem.jsx";
+import { slideLeft, slideRight } from "@/shared/utils/animations.js";
 
 import {
   languages,
   databases,
   tools,
   softSkills
-} from "../data/skills.js";
+} from "@/shared/data/skills.js";
 
 export default function Skills() {
   return (

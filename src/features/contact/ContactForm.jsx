@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { sendEmail } from "../../utils/email";
-import { fadeLeft } from "../../utils/animations";
-import { validateField, validateForm } from "../../utils/validation";
+import { sendEmail } from "@/shared/utils/email";
+import { fadeLeft } from "@/shared/utils/animations";
+import { validateField, validateForm } from "@/shared/utils/validation";
 
 const baseInput = `
   w-full px-4 py-3

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import SkillItem from "./SkillItem.jsx";
-import { skillsContainer } from "../utils/animations.js";
+import { skillsContainer } from "@/shared/utils/animations.js";
 
 export default function SkillCategory({ title, items }) {
   return (

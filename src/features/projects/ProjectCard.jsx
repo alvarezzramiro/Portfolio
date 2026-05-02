@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import githubLogo from "/icons/hard-skills/githublogo.svg";
-import { projectCardVariants } from "../utils/animations";
+import { projectCardVariants } from "@/shared/utils/animations";
 
 export default function ProjectCard({ title, description, logo, repo, index }) {
   return (
@@ -49,7 +49,7 @@ export default function ProjectCard({ title, description, logo, repo, index }) {
         target="_blank"
         rel="noopener noreferrer"
         onClick={(e) => e.stopPropagation()}
-        className="flex items-center gap-2 text-sm text-gray-400 group/link transition-all duration-200"
+        className="inline-flex items-center gap-2 w-fit text-sm text-gray-400 group/link transition-all duration-200"
       >
         <img
           src={githubLogo}
@@ -58,7 +58,7 @@ export default function ProjectCard({ title, description, logo, repo, index }) {
         />
 
         <span className="group-hover/link:text-[#D8B89D] transition">
-          View repository →
+          View repository
         </span>
       </a>
     </motion.div>

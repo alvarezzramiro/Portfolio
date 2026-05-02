@@ -13,18 +13,31 @@ export default function Navbar() {
 
   const updateUnderline = (id) => {
     const el = linksRef.current[id];
-    if (!el) return;
+    const container = el?.parentElement?.parentElement; // contenedor flex principal
+
+    if (!el || !container) return;
+
+    const elRect = el.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
 
     const width = 25;
 
     setUnderline({
       width,
-      left: el.offsetLeft + el.offsetWidth / 2 - width / 2,
+      left:
+        elRect.left -
+        containerRect.left +
+        elRect.width / 2 -
+        width / 2,
     });
   };
 
   useEffect(() => {
-    updateUnderline(active);
+    const timeout = setTimeout(() => {
+      updateUnderline(active);
+    }, 50);
+
+    return () => clearTimeout(timeout);
   }, [active]);
 
   return (
@@ -40,23 +53,32 @@ export default function Navbar() {
         <div className="absolute left-1/2 -translate-x-1/2 hidden lg:block">
           <div className="px-12 py-4 rounded-full bg-[#292929]/70 border border-white/10 backdrop-blur-md">
             
-            <div className="relative flex items-center gap-6">
-              {navLinks.map((link) => (
-                <button
-                  key={link.id}
-                  ref={(el) => (linksRef.current[link.id] = el)}
-                  onClick={() => scrollTo(link.id)}
-                  className={`
-                    px-2 transition-all duration-300
-                    ${
-                      active === link.id
-                        ? "text-[#D8B89D]"
-                        : "text-gray-300 hover:text-[#D8B89D]"
-                    }
-                  `}
-                >
-                  {link.label}
-                </button>
+            <div className="relative flex items-center">
+              {navLinks.map((link, i) => (
+                <div key={link.id} className="flex items-center">
+                  
+                  {/* BOTÓN */}
+                  <button
+                    ref={(el) => (linksRef.current[link.id] = el)}
+                    onClick={() => scrollTo(link.id)}
+                    className={`
+                      px-3 transition-all duration-300
+                      ${
+                        active === link.id
+                          ? "text-[#D8B89D] tracking-[0.08em]"
+                          : "text-gray-300 hover:text-[#D8B89D] hover:tracking-[0.08em]"
+                      }
+                    `}
+                  >
+                    {link.label}
+                  </button>
+
+                  {/* 👉 SEPARADOR */}
+                  {i < navLinks.length - 1 && (
+                    <span className="w-px h-4 bg-white/10 mx-2" />
+                  )}
+
+                </div>
               ))}
 
               {/* underline */}

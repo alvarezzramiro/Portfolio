@@ -1,6 +1,6 @@
-import Section from "../components/Section";
-import ContactForm from "../components/contact/ContactForm";
-import ContactInfo from "../components/contact/ContactInfo";
+import Section from "@/shared/components/Section.jsx";
+import ContactForm from "./ContactForm";
+import ContactInfo from "./ContactInfo";
 
 export default function Contact() {
   return (
