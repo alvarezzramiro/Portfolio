@@ -27,11 +27,11 @@ export default function Home() {
         </motion.h1>
 
         <motion.h2 variants={fadeUpItem} className={subtitleClass}>
-          Backend Developer
+          Backend Developer | Software Engeneering Student
         </motion.h2>
 
         <motion.p variants={fadeUpItem} className={textClass}>
-          Descripción
+          Turning complexity into scalable solutions.
         </motion.p>
       </motion.div>
     </Section>

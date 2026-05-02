@@ -73,8 +73,12 @@ export default function About() {
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
               About <span className="text-[#D8B89D]">me</span>
             </h2>
-            <p className="text-gray-300 leading-relaxed text-base md:text-lg max-w-lg">
-              Bio
+            <p className="text-gray-300 leading-relaxed text-base md:text-lg max-w-lg whitespace-pre-line">
+              {`I’m an advanced Software Engineering student focused on backend development and scalable systems design.
+
+              I’m interested in understanding how systems work internally, not just using them. That’s why I focus on clean architecture, performance and well-structured solutions.
+
+              Through my projects, I aim to design and build systems that are reliable, maintainable and prepared to scale.`}
             </p>
           </motion.div>
 

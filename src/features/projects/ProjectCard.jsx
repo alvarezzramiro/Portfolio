@@ -10,6 +10,7 @@ export default function ProjectCard({ title, description, logo, repo, index }) {
       className="
         group relative flex flex-col gap-5 p-6 rounded-2xl
         border border-white/10 bg-[#2a2a2a]
+        h-full max-w-[320px] w-full min-h-[260px]
         hover:border-[#D8B89D]/40
         transition-colors duration-150
         will-change-transform

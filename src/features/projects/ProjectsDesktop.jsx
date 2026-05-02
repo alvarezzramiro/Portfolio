@@ -9,25 +9,30 @@ import {
 
 export default function ProjectsDesktop() {
   return (
-    <div className="flex flex-col gap-12 w-full">
+    <div className="grid grid-cols-[0.8fr_2fr] gap-12 w-full items-start">
 
-      {/* HEADER */}
-      <motion.div
-        variants={fadeUpContainer}
-        initial="hidden"
-        whileInView="show"
-        className="flex flex-col gap-3"
-      >
-        <motion.h2 variants={fadeUpItem} className="text-5xl font-semibold">
-          My <span className="text-[#D8B89D]">Projects</span>
-        </motion.h2>
+      {/* IZQUIERDA */}
+      <div className="flex flex-col justify-between h-full">
 
-        <motion.p variants={fadeUpItem} className="text-[#5C5F4F]">
-          A selection of things I've built.
-        </motion.p>
-      </motion.div>
+        {/* HEADER */}
+        <motion.div
+          variants={fadeUpContainer}
+          initial="hidden"
+          whileInView="show"
+          className="flex flex-col gap-3"
+        >
+          <motion.h2 variants={fadeUpItem} className="text-5xl font-semibold">
+            My <span className="text-[#D8B89D]">Projects</span>
+          </motion.h2>
 
-      {/* GRID */}
+          <motion.p variants={fadeUpItem} className="text-[#5C5F4F]">
+            A selection of things I've built.
+          </motion.p>
+        </motion.div>
+
+      </div>
+
+      {/* DERECHA (CARDS) */}
       <motion.div
         variants={projectsContainer}
         initial="hidden"

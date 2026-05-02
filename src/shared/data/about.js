@@ -5,8 +5,9 @@ export const datos = [
 ];
 
 export const education = [
-  { year: "2021 – present", title: "Computer Science", place: "Universidad X" },
-  { year: "2020", title: "Curso Y", place: "Plataforma Z" },
+  { year: "2021 – present", 
+    title: "Systems Engeneering", 
+    place: "Universidad Nacional del Centro de la Provincia de Buenos Aires" },
 ];
 
 export const languages = [

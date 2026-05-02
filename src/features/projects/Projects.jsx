@@ -12,7 +12,7 @@ export default function Projects() {
       </div>
 
       {/* Desktop */}
-      <div className="hidden lg:block">
+      <div className="hidden lg:block ">
         <ProjectsDesktop />
       </div>
 

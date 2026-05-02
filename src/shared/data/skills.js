@@ -16,6 +16,8 @@ import problemsolvingLogo from "/icons/soft-skills/problemsolving.svg"
 import communicationLogo from "/icons/soft-skills/communication.svg"
 import teamworkLogo from "/icons/soft-skills/teamwork.svg"
 import adaptabilityLogo from "/icons/soft-skills/adaptability.svg"
+import analyticalthinking from "/icons/soft-skills/analyticalthinking.svg"
+import learning from "/icons/soft-skills/learning.svg"
 
 export const languages = [
   { name: "Java", icon: javaLogo, size: "w-9 h-9" },
@@ -42,4 +44,6 @@ export const softSkills = [
   { name: "Communication", icon: communicationLogo },
   { name: "Teamwork", icon: teamworkLogo },
   { name: "Adaptability", icon: adaptabilityLogo },
+  { name: "Analytical thinking", icon: analyticalthinking },
+  { name: "Continuous Learning", icon: learning },
 ];
