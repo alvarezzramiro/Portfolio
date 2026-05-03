@@ -15,6 +15,7 @@ import neo4jlogo from "/icons/hard-skills/neo4jlogo.svg"
 import pythonlogo from "/icons/hard-skills/pythonlogo.svg"
 import csharplogo from "/icons/hard-skills/csharplogo.svg"
 import unitylogo from "/icons/hard-skills/unitylogo.svg"
+import redislogo from "/icons/hard-skills/redislogo.svg"
 
 export const projects = [
   {
@@ -38,14 +39,15 @@ export const projects = [
     ],
   },
   {
-    title: "Geolocalization API",
+    title: "Geolocation API",
     description: "In progress...",
     logo: geolocalization,
-    repo: "#",
+    repo: "https://github.com/alvarezzramiro/Geolocation-API",
     technologies: [ 
       { name: "GoLang", icon: gologo },
       { name: "Docker", icon: dockerlogo },
-      { name: "Neo4j", icon: neo4jlogo }
+      { name: "Neo4j", icon: neo4jlogo },
+      { name: "Redis", icon: redislogo }
     ],
   },
   {
