@@ -21,7 +21,7 @@ export default function Section({
           relative z-10
           w-full max-w-[1250px] mx-auto
           px-6
-          ${centered ? "h-full flex flex-col justify-center" : "pt-28 pb-16"}
+          ${centered ? "min-h-screen flex flex-col justify-center pt-20" : "pt-28 pb-16"}
           ${contentClassName}
         `}
       >

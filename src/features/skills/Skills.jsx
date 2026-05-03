@@ -21,7 +21,7 @@ export default function Skills() {
           <h2 className="text-4xl md:text-5xl font-semibold">
             My <span className="text-[#D8B89D]">Skills</span>
           </h2>
-          <p className="text-[#5C5F4F]">
+          <p className="text-[#A8A39A]">
             Technologies and tools I use to build solutions.
           </p>
         </div>

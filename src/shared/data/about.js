@@ -5,9 +5,13 @@ export const datos = [
 ];
 
 export const education = [
-  { year: "2021 – present", 
+  { year: "2021 – PRESENT", 
     title: "Systems Engeneering", 
-    place: "Universidad Nacional del Centro de la Provincia de Buenos Aires" },
+    place: "Universidad Nacional del Centro de la Provincia de Buenos Aires",
+    location: "Tandil, Buenos Aires, Argentina",
+    progress: "70%",
+    gpa: "7.3 / 10"
+  },
 ];
 
 export const languages = [

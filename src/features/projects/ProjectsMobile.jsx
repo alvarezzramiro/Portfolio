@@ -95,7 +95,7 @@ export default function ProjectsMobile() {
           My <span className="text-[#D8B89D]">Projects</span>
         </motion.h2>
 
-        <motion.p variants={fadeUpItem} className="text-[#5C5F4F]">
+        <motion.p variants={fadeUpItem} className="text-[#A8A39A]">
           A selection of things I've built.
         </motion.p>
       </motion.div>

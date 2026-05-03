@@ -12,7 +12,7 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl font-semibold">
             Get In <span className="text-[#D8B89D]">Touch</span>
           </h2>
-          <p className="text-[#5C5F4F]">
+          <p className="text-[#A8A39A]">
             Feel free to reach out for collaborations or just a friendly hello
           </p>
         </div>

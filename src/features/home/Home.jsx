@@ -6,7 +6,7 @@ const titleClass =
   "text-5xl md:text-7xl font-semibold tracking-tight leading-tight";
 
 const subtitleClass =
-  "text-lg md:text-2xl text-[#5C5F4F] tracking-wide";
+  "text-lg md:text-2xl text-[#A8A39A] tracking-wide";
 
 const textClass =
   "text-gray-300 max-w-xl leading-relaxed text-base md:text-lg";
