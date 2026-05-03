@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import githubLogo from "/icons/hard-skills/githublogo.svg";
 import { projectCardVariants } from "@/shared/utils/animations";
 
-export default function ProjectCard({ title, description, logo, repo, index }) {
+export default function ProjectCard({ title, description, logo, repo, technologies = [], index }) {
   return (
     <motion.div
       custom={index}
@@ -25,15 +25,6 @@ export default function ProjectCard({ title, description, logo, repo, index }) {
         "
       />
 
-      {/* Logo */}
-      {logo && (
-        <img
-          src={logo}
-          alt={title}
-          className="w-6 h-6 opacity-80 group-hover:opacity-100 transition"
-        />
-      )}
-
       {/* Texto */}
       <div className="flex flex-col gap-2 flex-1">
         <h3 className="text-lg font-semibold text-gray-100">
@@ -42,6 +33,36 @@ export default function ProjectCard({ title, description, logo, repo, index }) {
         <p className="text-gray-400 text-sm">
           {description}
         </p>
+      </div>
+
+      {/* Technologies */}
+      <div className="flex gap-2 flex-wrap">
+        {technologies.map((tech) => (
+          <div
+            key={tech.name}
+            title={tech.name}
+            className="
+              flex items-center justify-center
+              h-8 px-2
+              rounded-lg
+              bg-white/10 border border-white/10
+              transition-all duration-200
+              group-hover:border-[#D8B89D]/40
+            "
+          >
+            {tech.icon ? (
+              <img
+                src={tech.icon}
+                alt={tech.name}
+                className="w-5 h-5"
+              />
+            ) : (
+              <span className="text-xs text-gray-200 font-medium">
+                {tech.name}
+              </span>
+            )}
+          </div>
+        ))}
       </div>
 
       {/* Link */}

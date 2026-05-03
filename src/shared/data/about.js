@@ -10,7 +10,7 @@ export const education = [
     place: "Universidad Nacional del Centro de la Provincia de Buenos Aires",
     location: "Tandil, Buenos Aires, Argentina",
     progress: "70%",
-    gpa: "7.3 / 10"
+    gpa: "7.3"
   },
 ];
 
