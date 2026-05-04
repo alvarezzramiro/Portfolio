@@ -19,7 +19,7 @@ export default function Section({
       <div
         className={`
           relative z-10
-          w-full max-w-[1250px] mx-auto
+          w-full max-w-[1300px] mx-auto
           px-6
           ${centered ? "min-h-screen flex flex-col justify-center pt-20" : "pt-28 pb-16"}
           ${contentClassName}
