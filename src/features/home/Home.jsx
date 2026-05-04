@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { fadeUpContainer, fadeUpItem } from "@/shared/utils/animations.js";
 
 const titleClass =
-  "text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight whitespace-nowrap";
+  "text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight lg:whitespace-nowrap";
 
 const subtitleClass =
   "text-lg md:text-2xl text-[#A8A39A] tracking-wide";
@@ -29,7 +29,7 @@ export default function Home() {
             <span className="text-[#D8B89D]">Alvarez Zulaica</span>
           </motion.h1>
 
-          <motion.h2 variants={fadeUpItem} className={`${subtitleClass} whitespace-nowrap`}>
+          <motion.h2 variants={fadeUpItem} className={`${subtitleClass} lg:whitespace-nowrap`}>
             Backend Developer | Software Engineering Student
           </motion.h2>
 
