@@ -113,12 +113,14 @@ export default function About() {
           {/* Languages */}
           <motion.div variants={staggerItemVariants}>
             <InfoBlock title="Languages">
-              {languages.map(({ lang, level }) => (
-                <div key={lang} className="flex flex-col gap-0.5">
-                  <span className={valueClass}>{lang}</span>
-                  <span className={labelClass}>{level}</span>
-                </div>
-              ))}
+              <div className="grid grid-cols-2 gap-x-8 gap-y-2 w-fit">
+                {languages.map(({ lang, level }) => (
+                  <div key={lang} className="flex flex-col items-start">
+                    <span className={valueClass}>{lang}</span>
+                    <span className={labelClass}>{level}</span>
+                  </div>
+                ))}
+              </div>
             </InfoBlock>
           </motion.div>
         </motion.div>

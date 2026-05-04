@@ -11,6 +11,20 @@ export default function Navbar() {
   const linksRef = useRef({});
   const [underline, setUnderline] = useState({});
 
+  const [cvOpen, setCvOpen] = useState(false);
+  const cvRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (cvRef.current && !cvRef.current.contains(e.target)) {
+        setCvOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const updateUnderline = (id) => {
     const el = linksRef.current[id];
     const container = el?.parentElement?.parentElement; // contenedor flex principal
@@ -92,13 +106,62 @@ export default function Navbar() {
 
         {/* RIGHT */}
         <div className="hidden lg:block">
-          <a
-            href="/cv.pdf"
-            download
-            className="px-5 py-2.5 rounded-full border border-white/10 bg-white/5 text-gray-300 hover:bg-white/10 transition"
-          >
-            Download CV
-          </a>
+          <div className="relative" ref={cvRef}>
+
+            {/* BOTÓN */}
+            <button
+              onClick={() => setCvOpen((prev) => !prev)}
+              className="
+                px-5 py-2.5 rounded-full
+                border border-white/10
+                bg-white/5 text-gray-300
+                hover:bg-white/10
+                transition
+              "
+            >
+              Download CV
+            </button>
+
+            {/* DROPDOWN */}
+            <div
+              className={`
+                absolute left-1/2 -translate-x-1/2 top-full pt-2
+                flex flex-col
+                transition-all duration-200 ease-out origin-top
+                ${
+                  cvOpen
+                    ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
+                    : "opacity-0 translate-y-2 scale-95 pointer-events-none"
+                }
+              `}
+            >
+              <div className="bg-[#292929]/90 backdrop-blur-md border border-white/10 rounded-xl p-2 flex flex-col gap-1 shadow-lg">
+                <span className="text-[10px] uppercase tracking-widest text-[#A8A39A]/70 px-1 text-center">
+                  Select language
+                </span>
+                
+                <div className="h-px bg-white/10 my-1" />
+
+                <a
+                  href={`${import.meta.env.BASE_URL}CV/CV English.pdf`}
+                  download
+                  className="px-4 py-2 text-sm text-gray-300 hover:text-[#D8B89D] transition rounded-lg"
+                >
+                  English
+                </a>
+
+                <a
+                  href={`${import.meta.env.BASE_URL}CV/CV Spanish.pdf`}
+                  download
+                  className="px-4 py-2 text-sm text-gray-300 hover:text-[#D8B89D] transition rounded-lg"
+                >
+                  Spanish
+                </a>
+
+              </div>
+            </div>
+
+          </div>
         </div>
 
         {/* BURGER */}
