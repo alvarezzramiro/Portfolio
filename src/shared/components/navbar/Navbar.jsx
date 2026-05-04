@@ -143,7 +143,7 @@ export default function Navbar() {
                 <div className="h-px bg-white/10 my-1" />
 
                 <a
-                  href={`${import.meta.env.BASE_URL}CV/CV English.pdf`}
+                  href={`${import.meta.env.BASE_URL}CV/CV Ingles.pdf`}
                   download
                   className="px-4 py-2 text-sm text-gray-300 hover:text-[#D8B89D] transition rounded-lg"
                 >
@@ -151,7 +151,7 @@ export default function Navbar() {
                 </a>
 
                 <a
-                  href={`${import.meta.env.BASE_URL}CV/CV Spanish.pdf`}
+                  href={`${import.meta.env.BASE_URL}CV/CV Español.pdf`}
                   download
                   className="px-4 py-2 text-sm text-gray-300 hover:text-[#D8B89D] transition rounded-lg"
                 >

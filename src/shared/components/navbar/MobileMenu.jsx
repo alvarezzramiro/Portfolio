@@ -52,7 +52,7 @@ export default function MobileMenu({ open, setOpen, links, active, scrollTo }) {
               </span>
 
               <a
-                href={`${import.meta.env.BASE_URL}CV/CV English.pdf`}
+                href={`${import.meta.env.BASE_URL}CV/CV Ingles.pdf`}
                 download
                 className="px-4 py-2 text-sm text-gray-300 hover:text-[#D8B89D] transition"
               >
@@ -60,11 +60,11 @@ export default function MobileMenu({ open, setOpen, links, active, scrollTo }) {
               </a>
 
               <a
-                href={`${import.meta.env.BASE_URL}CV/CV Spanish.pdf`}
+                href={`${import.meta.env.BASE_URL}CV/CV Español.pdf`}
                 download
                 className="px-4 py-2 text-sm text-gray-300 hover:text-[#D8B89D] transition"
               >
-                Español
+                Spanish
               </a>
 
             </div>
