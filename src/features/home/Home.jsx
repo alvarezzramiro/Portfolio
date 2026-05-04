@@ -26,11 +26,14 @@ export default function Home() {
         >
           <motion.h1 variants={fadeUpItem} className={titleClass}>
             <span className="text-gray-200"> Ramiro </span>
+            <br className="block lg:hidden" />
             <span className="text-[#D8B89D]">Alvarez Zulaica</span>
           </motion.h1>
 
           <motion.h2 variants={fadeUpItem} className={`${subtitleClass} lg:whitespace-nowrap`}>
-            Backend Developer | Software Engineering Student
+            Backend Developer
+            <br className="block lg:hidden" />
+            <span className="lg:before:content-['_|_']"> Software Engineering Student</span>
           </motion.h2>
 
           <motion.p variants={fadeUpItem} className={textClass}>
