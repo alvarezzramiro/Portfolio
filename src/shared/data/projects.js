@@ -40,7 +40,7 @@ export const projects = [
   },
   {
     title: "Geolocation API",
-    description: "In progress...",
+    description: "Project under development for computing and comparing routes and distances across a city using graph algorithms and efficient data modeling.",
     logo: geolocalization,
     repo: "https://github.com/alvarezzramiro/Geolocation-API",
     technologies: [ 
