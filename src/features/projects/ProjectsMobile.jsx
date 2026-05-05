@@ -15,14 +15,22 @@ function ArrowButton({ direction, onClick }) {
     <button
       onClick={onClick}
       className={`
+        group
         absolute top-1/2 -translate-y-1/2
         ${isLeft ? "left-[-20px]" : "right-[-20px]"}
         z-10 w-10 h-10 rounded-full
         bg-black/40 backdrop-blur-md
-        border border-white/10 text-white
+        border border-white/10
+        flex items-center justify-center
+        transition-all duration-300
+        hover:bg-white/10 hover:border-white/30 hover:scale-110
       `}
     >
-      {isLeft ? "←" : "→"}
+      <img
+        src={`${import.meta.env.BASE_URL}icons/arrows/${direction}.svg`}
+        alt={direction}
+        className="w-4 h-4 opacity-60 transition-opacity duration-300 group-hover:opacity-100"
+      />
     </button>
   );
 }

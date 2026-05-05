@@ -3,6 +3,7 @@ import { navLinks } from "../../data/navLinks";
 import useActiveSection from "../../hooks/useActiveSection";
 import NavLinks from "./NavLinks";
 import MobileMenu from "./MobileMenu";
+import { createPortal } from "react-dom";
 
 export default function Navbar() {
   const { active, scrollTo } = useActiveSection();
@@ -27,7 +28,7 @@ export default function Navbar() {
 
   const updateUnderline = (id) => {
     const el = linksRef.current[id];
-    const container = el?.parentElement?.parentElement; // contenedor flex principal
+    const container = el?.parentElement?.parentElement;
 
     if (!el || !container) return;
 
@@ -47,15 +48,32 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      updateUnderline(active);
-    }, 50);
+    // Recalcular al terminar la transición del texto (tracking cambia el ancho)
+    const el = linksRef.current[active];
+    if (!el) return;
 
-    return () => clearTimeout(timeout);
+    const handleTransitionEnd = () => updateUnderline(active);
+    el.addEventListener("transitionend", handleTransitionEnd);
+
+    // También recalcular inmediatamente
+    updateUnderline(active);
+
+    return () => el.removeEventListener("transitionend", handleTransitionEnd);
   }, [active]);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-6 lg:px-10">
+    <nav 
+      className="
+        fixed top-0 left-0 w-full z-[118] px-6 lg:px-10
+
+        /* MOBILE BACKGROUND */
+        bg-gradient-to-b from-[#0f0f0f]/80 via-[#0f0f0f]/40 to-transparent
+        backdrop-blur-sm
+
+        /* DESKTOP limpio */
+        lg:bg-transparent lg:[backdrop-filter:none]
+      "
+    >
       <div className="relative flex items-center justify-between mt-6">
 
         {/* LOGO */}
@@ -87,7 +105,7 @@ export default function Navbar() {
                     {link.label}
                   </button>
 
-                  {/* 👉 SEPARADOR */}
+                  {/* SEPARADOR */}
                   {i < navLinks.length - 1 && (
                     <span className="w-px h-4 bg-white/10 mx-2" />
                   )}
@@ -143,7 +161,7 @@ export default function Navbar() {
                 <div className="h-px bg-white/10 my-1" />
 
                 <a
-                  href={`${import.meta.env.BASE_URL}CV/CV Ingles.pdf`}
+                  href={`${import.meta.env.BASE_URL}CV/Ramiro_Alvarez_Zulaica_Resume.pdf`}
                   download
                   className="px-4 py-2 text-sm text-gray-300 hover:text-[#D8B89D] transition rounded-lg"
                 >
@@ -151,7 +169,7 @@ export default function Navbar() {
                 </a>
 
                 <a
-                  href={`${import.meta.env.BASE_URL}CV/CV Español.pdf`}
+                  href={`${import.meta.env.BASE_URL}CV/Ramiro_Alvarez_Zulaica_CV.pdf`}
                   download
                   className="px-4 py-2 text-sm text-gray-300 hover:text-[#D8B89D] transition rounded-lg"
                 >
@@ -163,18 +181,26 @@ export default function Navbar() {
 
           </div>
         </div>
+        
+        <div className="lg:hidden w-10 h-10" />
 
         {/* BURGER */}
-        <div className="lg:hidden">
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="w-10 h-10 flex flex-col justify-center items-center gap-1"
+        {createPortal(
+          <div
+            className="lg:hidden fixed z-[119]"
+            style={{ top: "1.5rem", right: "1.5rem" }}
           >
-            <span className={`w-6 h-[2px] bg-white transition ${menuOpen ? "rotate-45 translate-y-[6px]" : ""}`} />
-            <span className={`w-6 h-[2px] bg-white transition ${menuOpen ? "opacity-0" : ""}`} />
-            <span className={`w-6 h-[2px] bg-white transition ${menuOpen ? "-rotate-45 -translate-y-[6px]" : ""}`} />
-          </button>
-        </div>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="w-10 h-10 flex flex-col justify-center items-center gap-1"
+            >
+              <span className={`w-6 h-[2px] bg-white transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[6px]" : ""}`} />
+              <span className={`w-6 h-[2px] bg-white transition-all duration-300 ${menuOpen ? "opacity-0 scale-x-0" : ""}`} />
+              <span className={`w-6 h-[2px] bg-white transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-[6px]" : ""}`} />
+            </button>
+          </div>,
+          document.body
+        )}
 
       </div>
 
