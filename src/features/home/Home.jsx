@@ -49,14 +49,14 @@ export default function Home() {
           className="hidden lg:flex justify-end"
         >
           <motion.div
-            animate={{ y: [0, -12, 0] }}
+            animate={{ y: [0, -10, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
             className="transform-gpu will-change-transform"
           >
             <img
               src={`${import.meta.env.BASE_URL}image/illustration.png`}
               alt="Illustration"
-              className="w-[540px] opacity-60"
+              className="w-[550px] opacity-60"
             />
           </motion.div>
         </motion.div>

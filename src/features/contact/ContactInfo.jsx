@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { fadeRight } from "@/shared/utils/animations";
 import { useState } from "react";
 import SocialLink from "./SocialLink";
-import copyIcon from "/icons/social/copy.svg";
+import copyIcon from "/icons/others/copy.svg";
 
 export default function ContactInfo() {
   const [copied, setCopied] = useState(null);

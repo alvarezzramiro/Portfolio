@@ -45,9 +45,9 @@ export const projects = [
     repo: "https://github.com/alvarezzramiro/Geolocation-API",
     technologies: [ 
       { name: "GoLang", icon: gologo },
-      { name: "Docker", icon: dockerlogo },
       { name: "Neo4j", icon: neo4jlogo },
-      { name: "Redis", icon: redislogo }
+      { name: "Redis", icon: redislogo },
+      { name: "Docker", icon: dockerlogo }
     ],
   },
   {

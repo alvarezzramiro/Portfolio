@@ -27,7 +27,7 @@ function ArrowButton({ direction, onClick }) {
       `}
     >
       <img
-        src={`${import.meta.env.BASE_URL}icons/arrows/${direction}.svg`}
+        src={`${import.meta.env.BASE_URL}icons/others/${direction}.svg`}
         alt={direction}
         className="w-4 h-4 opacity-60 transition-opacity duration-300 group-hover:opacity-100"
       />

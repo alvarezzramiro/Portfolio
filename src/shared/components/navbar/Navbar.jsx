@@ -95,11 +95,8 @@ export default function Navbar() {
                     onClick={() => scrollTo(link.id)}
                     className={`
                       px-3 transition-all duration-300
-                      ${
-                        active === link.id
-                          ? "text-[#D8B89D] tracking-[0.08em]"
-                          : "text-gray-300 hover:text-[#D8B89D] hover:tracking-[0.08em]"
-                      }
+                      ${active === link.id ? "text-[#D8B89D]" : "text-gray-300"}
+                      hover:text-[#D8B89D] hover:tracking-[0.08em]
                     `}
                   >
                     {link.label}

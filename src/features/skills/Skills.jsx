@@ -13,7 +13,7 @@ import {
 
 export default function Skills() {
   return (
-    <Section id="skills">
+    <Section id="skills" centered>
       <div className="flex flex-col gap-12 w-full">
 
         {/* Título */}
