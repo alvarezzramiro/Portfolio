@@ -30,7 +30,7 @@ export const projects = [
   },
   {
     title: "Portfolio Website",
-    description: "A personal portfolio website built to showcase projects and skills, with a focus on clean design and structured presentation.",
+    description: "A personal portfolio website built to showcase my projects, skills, and background, with a focus on clean design and structured presentation.",
     logo: portfolio,
     repo: "https://github.com/alvarezzramiro/Portfolio",
     technologies: [ 
