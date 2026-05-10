@@ -61,7 +61,7 @@ export const projects = [
     ],
   },
   {
-    title: "Recomendation system",
+    title: "Recommendation system",
     description: "In progress...",
     logo: recommendation,
     repo: "#",
