@@ -16,6 +16,8 @@ import pythonlogo from "/icons/hard-skills/pythonlogo.svg"
 import csharplogo from "/icons/hard-skills/csharplogo.svg"
 import unitylogo from "/icons/hard-skills/unitylogo.svg"
 import redislogo from "/icons/hard-skills/redislogo.svg"
+import springLogo from "/icons/hard-skills/springlogo.svg"
+import postgresqlLogo from "/icons/hard-skills/postgresqllogo.svg"
 
 export const projects = [
   {
@@ -29,13 +31,14 @@ export const projects = [
     ],
   },
   {
-    title: "Portfolio Website",
-    description: "A personal portfolio website built to showcase my projects, skills, and background, with a focus on clean design and structured presentation.",
-    logo: portfolio,
-    repo: "https://github.com/alvarezzramiro/Portfolio",
-    technologies: [ 
-      { name: "React", icon: reactlogo }, 
-      { name: "JavaScript", icon: jslogo }
+    title: "Finance API",
+    description: "Personal finance management platform in development with secure authentication, analytics and expense tracking.",
+    logo: ar,
+    repo: "https://github.com/alvarezzramiro/Finance",
+    technologies: [
+      { name: "Java", icon: javalogo },
+      { name: "Spring", icon: springLogo },
+      { name: "PostgreSQL", icon: postgresqlLogo }
     ],
   },
   {
@@ -51,13 +54,13 @@ export const projects = [
     ],
   },
   {
-    title: "AR App",
-    description: "In progress...",
-    logo: ar,
-    repo: "#",
-    technologies: [
-      { name: "Unity", icon: unitylogo },
-      { name: "C#", icon: csharplogo }
+    title: "Portfolio Website",
+    description: "A personal portfolio website built to showcase my projects, skills, and background, with a focus on clean design and structured presentation.",
+    logo: portfolio,
+    repo: "https://github.com/alvarezzramiro/Portfolio",
+    technologies: [ 
+      { name: "React", icon: reactlogo }, 
+      { name: "JavaScript", icon: jslogo }
     ],
   },
   {
