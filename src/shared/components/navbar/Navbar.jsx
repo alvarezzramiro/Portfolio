@@ -134,7 +134,7 @@ export default function Navbar() {
                 transition
               "
             >
-              Download CV
+              Download Resume
             </button>
 
             {/* DROPDOWN */}

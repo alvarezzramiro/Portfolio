@@ -34,7 +34,7 @@ export default function MobileMenu({ open, setOpen, links, active, scrollTo }) {
             onClick={() => setCvOpen(!cvOpen)}
             className="w-full text-center px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 transition text-gray-300"
           >
-            Download CV
+            Download Resume
           </button>
 
           <div className={`overflow-hidden transition-all duration-300 ${cvOpen ? "max-h-40 opacity-100 mt-3" : "max-h-0 opacity-0"}`}>
