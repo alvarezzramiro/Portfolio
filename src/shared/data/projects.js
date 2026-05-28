@@ -18,6 +18,7 @@ import unitylogo from "/icons/hard-skills/unitylogo.svg"
 import redislogo from "/icons/hard-skills/redislogo.svg"
 import springLogo from "/icons/hard-skills/springlogo.svg"
 import postgresqlLogo from "/icons/hard-skills/postgresqllogo.svg"
+import fastapiLogo from "/icons/hard-skills/fastapilogo.svg"
 
 export const projects = [
   {
@@ -28,17 +29,6 @@ export const projects = [
     technologies: [ 
       { name: "Java", icon: javalogo },
       { name: "YACC", icon: "" },
-    ],
-  },
-  {
-    title: "Finance API",
-    description: "Personal finance management platform in development with secure authentication, analytics and expense tracking.",
-    logo: ar,
-    repo: "https://github.com/alvarezzramiro/Finance",
-    technologies: [
-      { name: "Java", icon: javalogo },
-      { name: "Spring", icon: springLogo },
-      { name: "PostgreSQL", icon: postgresqlLogo }
     ],
   },
   {
@@ -54,6 +44,30 @@ export const projects = [
     ],
   },
   {
+    title: "X-Ray Fracture Detection",
+    description: "AI-powered platform that detects bone fractures in X-rays and transforms them into interactive 3D models for clear patient understanding. Currently under active development.",
+    logo: recommendation,
+    repo: "#",
+    technologies: [  
+      { name: "Python", icon: pythonlogo },
+      { name: "FastAPI", icon: fastapiLogo },
+      { name: "Postgre SQL", icon: postgresqlLogo },
+      { name: "Docker", icon: dockerlogo },
+      { name: "Unity", icon: unitylogo }
+    ],
+  },
+  {
+    title: "Finance API",
+    description: "Personal finance management platform in development with secure authentication, analytics and expense tracking.",
+    logo: ar,
+    repo: "https://github.com/alvarezzramiro/Finance",
+    technologies: [
+      { name: "Java", icon: javalogo },
+      { name: "Spring", icon: springLogo },
+      { name: "PostgreSQL", icon: postgresqlLogo }
+    ],
+  },
+  {
     title: "Portfolio Website",
     description: "A personal portfolio website built to showcase my projects, skills, and background, with a focus on clean design and structured presentation.",
     logo: portfolio,
@@ -61,15 +75,6 @@ export const projects = [
     technologies: [ 
       { name: "React", icon: reactlogo }, 
       { name: "JavaScript", icon: jslogo }
-    ],
-  },
-  {
-    title: "Recommendation system",
-    description: "In progress...",
-    logo: recommendation,
-    repo: "#",
-    technologies: [  
-      { name: "Python", icon: pythonlogo },
     ],
   },
 ];
